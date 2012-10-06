@@ -9,6 +9,15 @@ Homework1::Application.routes.draw do
 
   resources :owners
 
+  root :to => 'pages#home'
+
+  match '/about', :to => 'pages#about'
+
+  match '/privacy', :to => 'pages#privacy'
+
+  match '/contact', :to => 'pages#contact'
+
+  match '/sign_up', :to => 'owners#new'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
