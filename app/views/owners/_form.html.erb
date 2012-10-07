@@ -1,3 +1,5 @@
+<head><title>Sign Up</title></head>
+<body>
 <%= form_for(@owner) do |f| %>
   <% if @owner.errors.any? %>
     <div id="error_explanation">
@@ -10,11 +12,6 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :id %><br />
-    <%= f.number_field :id %>
-  </div>
   <div class="field">
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name %>
@@ -51,3 +48,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+</body>

@@ -18,6 +18,8 @@ Homework1::Application.routes.draw do
   match '/contact', :to => 'pages#contact'
 
   match '/sign_up', :to => 'owners#new'
+
+  match '/show_owner', :to => 'owners#show'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

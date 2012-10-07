@@ -1,5 +1,5 @@
 class Owner < ActiveRecord::Base
-  attr_accessible :active, :city, :country, :email, :first_name, :id, :last_name, :phone, :street
+  attr_accessible :active, :city, :country, :email, :first_name, :last_name, :phone, :street
   	before_save :format_phone
 	validates :first_name, :last_name, :email, :phone, :presence => true
 	validates_format_of :email, :with => /^[\w]([^@\s,;]+)@(([\w-]+\.)+(com|edu|org|net|gov|mil|biz|info|qa))$/i, :message => "is not a valid format"

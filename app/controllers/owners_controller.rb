@@ -44,7 +44,7 @@ class OwnersController < ApplicationController
 
     respond_to do |format|
       if @owner.save
-        format.html { redirect_to @owner, notice: 'Owner was successfully created.' }
+        format.html { redirect_to @owner, notice: "Created new owner #{@owner.first_name} #{@owner.last_name}" }
         format.json { render json: @owner, status: :created, location: @owner }
       else
         format.html { render action: "new" }
@@ -76,7 +76,7 @@ class OwnersController < ApplicationController
     @owner.destroy
 
     respond_to do |format|
-      format.html { redirect_to owners_url }
+      format.html { redirect_to owners_url, notice: 'Owner was successfully deleted.' }
       format.json { head :no_content }
     end
   end
